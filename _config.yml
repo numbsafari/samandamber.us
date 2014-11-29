@@ -1,1 +1,1 @@
-exclude: ['CNAME', 'Gemfile*']
+exclude: [CNAME, 'Gemfile*', node_modules, Gruntfile.js, package.json]

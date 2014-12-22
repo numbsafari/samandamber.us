@@ -21,6 +21,8 @@ module.exports = function (grunt) {
                 '_layouts/**',
                 '_posts/**',
                 '_includes/**',
+                'css/**',
+                'fonts/**'
             ],
             tasks: ['shell:jekyllBuild'],
             options: {

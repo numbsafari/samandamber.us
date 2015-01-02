@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
+    <div class="navigation">
+      <ul>
+        {% assign nav_pages = site.pages | sort: 'nav_position' %}
+        {% for page in nav_pages %}
+          {% if page.nav_position %}
+            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
     <div class="content">
       {{ content }}
     </div>

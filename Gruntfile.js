@@ -17,7 +17,7 @@ module.exports = function (grunt) {
           livereload: {
             files: [
                 '_config.yml',
-                'index.html',
+                '**.html',
                 '_layouts/**',
                 '_posts/**',
                 '_includes/**',

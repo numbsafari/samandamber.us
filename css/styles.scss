@@ -2,6 +2,96 @@
 ---
 @import "fonts.css";
 
-h1 {
+body {
+	font-size: 1.4rem;
+
+	// background-color: #1f1f1c;
+	// background-color: #1e1b17;
+	// background-color: #343026;
+	background-color: #817c6b;
+}
+
+.content {
+	text-align: center;
+}
+
+.title {
+	h1 {
+		font-family: 'amatic_scregular';
+		font-size: 3.2rem;
+	}
+	h1:before {
+		display: block;
+		content: " ";
+		background-image: url('/images/left-arrow.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+
+		height: .6em;
+		width: 3em;
+
+		top: 10px;
+
+		margin-left: auto;
+		margin-right: auto;
+	}
+	h1:after {
+		display: block;
+		content: " ";
+		background-image: url('/images/right-arrow.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+
+		height: .6em;
+		width: 3em;
+
+		top: 10px;
+
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.announce {
 	font-family: 'great_vibesregular';
+	div.names {
+		font-size: 2.4rem;
+	}
+	div {
+		font-size: 1.4rem;
+	}
+}
+
+.dates {
+	font-family: 'reswysokrregular';
+}
+
+.location {
+	font-family: 'reswysokrregular';
+}
+
+
+@media all and (max-width: 480px) {
+}
+
+@media all and (min-width: 481px) {
+	body {
+		background-image: url(/images/forest.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+
+		color: #FFF;
+	}
+
+	.content {
+		width: 20em;
+		margin-left: auto;
+		margin-right: auto;
+
+		background-color: rgba(0, 0, 0, .4);
+
+		border: 2px solid rgba(0, 0, 0, .5);
+		border-radius: 4px;
+	}	
 }

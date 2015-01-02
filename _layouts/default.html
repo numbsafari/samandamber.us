@@ -3,12 +3,15 @@
 <html>
   <head>
     <title>Sam and Amber's Wedding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     {% if site.show_drafts %}
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     {% endif %}
     <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
-    {{ content }}
+    <div class="content">
+      {{ content }}
+    </div>
   </body>
 </html>

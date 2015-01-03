@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body class="{{ page.title | slugify }}">
-    {% if site.show_drafts != true %}
+    {% if site.show_drafts == true %}
     <div class="navigation">
       <ul>
         {% assign nav_pages = site.pages | sort: 'nav_position' %}

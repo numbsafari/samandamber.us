@@ -1,1 +1,9 @@
 exclude: [CNAME, 'Gemfile*', node_modules, Gruntfile.js, package.json]
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      draft: false

@@ -2,6 +2,12 @@
 ---
 @import "fonts.css";
 
+@mixin centered-block($width) {
+	width: $width;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 body {
 	background-color: #817c6b;
 
@@ -33,6 +39,8 @@ a {
 		-webkit-justify-content: space-around;
 
 		list-style-type: none;
+		margin: 0;
+		padding: 0;
 
 		li {
 			display: inline-block;
@@ -47,35 +55,23 @@ a {
 		font-family: 'amatic_scregular';
 		font-size: 3.2rem;
 	}
-	h1:before {
+	h1:before, h1:after {
+		@include centered-block(3em);
+
 		display: block;
 		content: " ";
-		background-image: url('/images/left-arrow.png');
 		background-repeat: no-repeat;
 		background-size: contain;
 
 		height: .6em;
-		width: 3em;
 
 		top: 10px;
-
-		margin-left: auto;
-		margin-right: auto;
+	}
+	h1:before {
+		background-image: url('/images/left-arrow.png');
 	}
 	h1:after {
-		display: block;
-		content: " ";
 		background-image: url('/images/right-arrow.png');
-		background-repeat: no-repeat;
-		background-size: contain;
-
-		height: .6em;
-		width: 3em;
-
-		top: 10px;
-
-		margin-left: auto;
-		margin-right: auto;
 	}
 }
 
@@ -101,7 +97,6 @@ a {
 @media all and (max-width: 420px) {
 	.navigation {
 		ul {
-			padding: 0;
 			li {
 
 			}
@@ -112,6 +107,7 @@ a {
 @media all and (min-width: 421px) {
 	$content-width: 40rem;
 	$content-padding: .25rem;
+	$content-background-color: rgba(0, 0, 0, .4);
 
 	body {
 		background-image: url(/images/forest.jpg);
@@ -123,23 +119,40 @@ a {
 	}
 
 	.navigation {
+		@include centered-block($content-width);
+
 		padding: $content-padding;
-		width: $content-width;
-		margin-left: auto;
-		margin-right: auto;
+
+		background-color: $content-background-color;
+
+		height: 1.5em;
+
+		border-width: .2rem .2rem 0 .2rem;
+		border-style: solid;
+		border-color: rgba(0, 0, 0, .5);
+
+		border-radius: 4px 4px 0 0;
+		border-collapse: collapse;
 
 		text-align: center;
+
+		ul {
+			height: 1rem;
+		}
 	}
 
 	.content {
+		@include centered-block($content-width);
+
 		padding: $content-padding;
-		width: $content-width;
-		margin-left: auto;
-		margin-right: auto;
 
-		background-color: rgba(0, 0, 0, .4);
+		background-color: $content-background-color;
 
-		border: .2em solid rgba(0, 0, 0, .5);
-		border-radius: 4px;
+		border-width: 0 .2rem .2rem .2rem;
+		border-style: solid;
+		border-color: rgba(0, 0, 0, .5);
+
+		border-radius: 0 0 4px 4px;
+		border-collapse: collapse;
 	}	
 }

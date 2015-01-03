@@ -15,9 +15,9 @@
     <div class="navigation">
       <ul>
         {% assign nav_pages = site.pages | sort: 'nav_position' %}
-        {% for page in nav_pages %}
-          {% if page.nav_position %}
-            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+        {% for nav in nav_pages %}
+          {% if nav.nav_position and (!nav.draft or site.show_drafts) %}
+            <li><a href="{{ nav.url }}" {% if nav.url == page.url %}data-nav-current="true"{% endif %}>{{ nav.title }}</a></li>
           {% endif %}
         {% endfor %}
       </ul>

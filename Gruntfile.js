@@ -18,6 +18,7 @@ module.exports = function (grunt) {
             files: [
                 '_config.yml',
                 '**.html',
+                '**.md',
                 '_layouts/**',
                 '_posts/**',
                 '_includes/**',

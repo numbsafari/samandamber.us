@@ -11,7 +11,8 @@
     {% endif %}
     <link rel="stylesheet" href="/css/styles.css">
   </head>
-  <body>
+  <body class="{{ page.title | slugify }}">
+    {% if site.show_drafts != true %}
     <div class="navigation">
       <ul>
         {% assign nav_pages = site.pages | sort: 'nav_position' %}
@@ -22,6 +23,7 @@
         {% endfor %}
       </ul>
     </div>
+    {% endif %}
     <div class="content">
       {{ content }}
     </div>

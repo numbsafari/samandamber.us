@@ -13,6 +13,20 @@ body {
 
 	font-size: 1.4rem;
 	line-height: 1.62;
+/*
+	&:not(.home) {
+		.navigation:after {
+			@include centered-block(15rem);
+			display: block;
+			content: " ";
+			// background-blend-mode: color;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-image: url(/images/bottom.png);
+			height: 1.4rem;
+		}
+	}
+*/
 }
 
 .content {

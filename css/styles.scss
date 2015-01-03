@@ -13,6 +13,35 @@ body {
 	text-align: center;
 }
 
+a {
+	color: inherit;
+}
+
+.navigation {
+	font-family: 'amaticbold';
+	font-size: 1.2rem;
+
+	a[data-nav-current=true] {
+		text-decoration: none;
+	}
+
+	ul {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		justify-content: space-around;
+		-webkit-justify-content: space-around;
+
+		list-style-type: none;
+
+		li {
+			display: inline-block;
+
+			font-weight: bold;
+		}
+	}
+}
+
 .title {
 	h1 {
 		font-family: 'amatic_scregular';
@@ -70,9 +99,20 @@ body {
 
 
 @media all and (max-width: 420px) {
+	.navigation {
+		ul {
+			padding: 0;
+			li {
+
+			}
+		}
+	}
 }
 
 @media all and (min-width: 421px) {
+	$content-width: 40rem;
+	$content-padding: .25rem;
+
 	body {
 		background-image: url(/images/forest.jpg);
 		background-size: cover;
@@ -82,9 +122,18 @@ body {
 		color: #FFF;
 	}
 
+	.navigation {
+		padding: $content-padding;
+		width: $content-width;
+		margin-left: auto;
+		margin-right: auto;
+
+		text-align: center;
+	}
+
 	.content {
-		padding: .25em;
-		width: 20em;
+		padding: $content-padding;
+		width: $content-width;
 		margin-left: auto;
 		margin-right: auto;
 
